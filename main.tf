@@ -147,6 +147,7 @@ resource "google_bigquery_table" "default" {
   dataset_id = google_bigquery_dataset.dataset.dataset_id
   table_id   = "word_count"
   project = var.project_id
+  deletion_protection=false
 
   labels = {
     env = "default"
